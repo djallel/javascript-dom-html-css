@@ -1,0 +1,24 @@
+.super {
+    background-color: yellow;
+}
+.vert {
+    background-color: green;
+}
+.rouge {
+    background-color: red;
+}
+.bleu {
+    background-color: blue;
+}
+
+#parent{
+    with: 380px;
+    height: 300px;
+    background-color: red;
+}
+
+#enfant {
+    with: 100px;
+    height: 100px;
+    background-color: blue;
+}
