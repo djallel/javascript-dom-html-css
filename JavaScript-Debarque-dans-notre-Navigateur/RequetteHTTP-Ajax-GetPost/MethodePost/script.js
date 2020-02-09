@@ -1,6 +1,12 @@
 const req =  new XMLHttpRequest();
 const url= 'https://jsonplaceholder.typicode.com/posts';
-const methodeGet = "GET";
+const methodeGet = "POST";
+const data = {
+ body : "blablabla",
+ titre :"Titre du poste",
+userId : 16
+};
+
 
 req.open(methodeGet, url);
 
@@ -8,7 +14,7 @@ req.open(methodeGet, url);
 req.onreadystatechange = function (event) {
 
     if (this.readyState === XMLHttpRequest.DONE) {
-        if (this.status === 200) {
+        if (this.status === 201) {
             alert(this.responseText);
             console.log(this.responseText);
         } else {
@@ -17,7 +23,7 @@ req.onreadystatechange = function (event) {
     }
 }
 
-req.send();
+req.send(data);
 
 
 
